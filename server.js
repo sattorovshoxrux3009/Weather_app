@@ -1,6 +1,18 @@
 let TelegramBot = require('node-telegram-bot-api');
 let axios = require('axios');
 
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 4000;
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+
 // Telegram bot tokeni
 let apiKey = '68eaa3bc316b4914b65173823242209';
 let token = '7723302452:AAHIytlMjiHAHj3JRfMlMr1X_RlGv4qcwwQ';
