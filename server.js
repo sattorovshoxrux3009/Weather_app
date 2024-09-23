@@ -185,3 +185,13 @@ bot.on('callback_query', (callbackQuery) => {
       });
   }
 });
+const https = require('https');
+
+// Har 5 daqiqada o'z serveringizga so'rov yuboradi
+setInterval(() => {
+    https.get('https://weather-app-c3r6.onrender.com', (res) => {
+        console.log(`Ping sent: ${res.statusCode}`);
+    }).on('error', (e) => {
+        console.error(`Error: ${e.message}`);
+    });
+}, 300000); // 300000 ms = 5 daqiqa
