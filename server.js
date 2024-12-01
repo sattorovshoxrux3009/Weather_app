@@ -15,7 +15,7 @@ app.listen(port, () => {
 
 // Telegram bot tokeni
 let apiKey = '68eaa3bc316b4914b65173823242209';
-let token = '7723302452:AAHIytlMjiHAHj3JRfMlMr1X_RlGv4qcwwQ';
+let token = 'YOUR_TOKEN';
 let bot = new TelegramBot(token, { polling: true });
 
 // Foydalanuvchilarning tanlovlari
